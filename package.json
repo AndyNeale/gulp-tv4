@@ -1,0 +1,45 @@
+{
+  "name": "gulp-tv4",
+  "description": "Validate files against json-schema v4",
+  "version": "0.1.0",
+  "homepage": "https://github.com/AndyNeale/gulp-tv4#readme",
+  "author": {
+    "name": "Andy Neale",
+    "url": "https://github.com/AndyNeale"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndyNeale/gulp-tv4"
+  },
+  "bugs": {
+    "url": "https://github.com/AndyNeale/gulp-tv4/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gulpplugin",
+    "json",
+    "json-schema",
+    "schema",
+    "tv4",
+    "validate",
+    "validator"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0",
+    "tv4": "^1.1.12"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "event-stream": "^3.3.1",
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  }
+}
