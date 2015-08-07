@@ -109,7 +109,7 @@ gulp.task( 'validate', function() {
 
 # Todo
 
-* Currently the way that validation errors are reported is a mess, this is entirely due to lack of experience (this is my first attempt at writing a Gulp plugin) so to say that there is some work to be done here is something of an understatement...
+* Report validation errors in a clean and consistent manner.
 
 
 # License
