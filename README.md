@@ -1,4 +1,4 @@
-# gulp-tv4 [![NPM Status](https://badge.fury.io/js/gulp-tv4.svg)](https://npmjs.org/package/gulp-tv4) [![Build Status](https://travis-ci.org/AndyNeale/gulp-tv4.png?branch=master)](https://travis-ci.org/AndyNeale/gulp-tv4) [![Dependency Status](https://david-dm.org/AndyNeale/gulp-tv4.svg?style=flat)](https://david-dm.org/AndyNeale/gulp-tv4)
+# gulp-tv4 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 > Use Gulp and [Tiny Validator (tv4)](https://github/com/geraintluff/tv4) to validate files against [json-schema](https://json-schema.org/) draft v4.
 
@@ -115,3 +115,11 @@ gulp.task( 'validate', function() {
 # License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+
+[npm-url]: https://npmjs.org/package/gulp-tv4
+[npm-image]: https://badge.fury.io/js/gulp-tv4.svg
+[travis-url]: https://travis-ci.org/AndyNeale/gulp-tv4
+[travis-image]: https://travis-ci.org/AndyNeale/gulp-tv4.png?branch=master
+[daviddm-url]: https://david-dm.org/AndyNeale/gulp-tv4
+[daviddm-image]: https://david-dm.org/AndyNeale/gulp-tv4.svg?style=flat
