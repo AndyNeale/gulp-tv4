@@ -1,6 +1,6 @@
 # gulp-tv4 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-> Use Gulp and [Tiny Validator (tv4)](https://github/com/geraintluff/tv4) to validate files against [json-schema](https://json-schema.org/) draft v4.
+> Use Gulp and [Tiny Validator (tv4)](https://github.com/geraintluff/tv4) to validate files against [json-schema](https://json-schema.org/) draft v4.
 
 
 # Usage
