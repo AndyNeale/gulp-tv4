@@ -16,15 +16,15 @@ test( 'Pass a valid file when called with a JSON schema definition', function( a
 
 	var stream = tv4( fakeSchema ) ;
 	stream.on( 'data', function( newFile ) {
-		assert.notEqual( typeof newFile, 'undefined', 'newFile is present' ) ;
-		assert.notEqual( typeof newFile.tv4, 'undefined', 'newFile.tv4 is present' ) ;
-		assert.notEqual( typeof newFile.tv4.valid, 'undefined', 'newFile.tv4.valid is present' ) ;
-		assert.equal( typeof newFile.tv4.valid, 'boolean', 'newFile.tv4.valid is a Boolean value' ) ;
+		assert.true( typeof newFile != 'undefined', 'newFile is present' ) ;
+		assert.true( typeof newFile.tv4 != 'undefined', 'newFile.tv4 is present' ) ;
+		assert.true( typeof newFile.tv4.valid != 'undefined', 'newFile.tv4.valid is present' ) ;
+		assert.true( typeof newFile.tv4.valid == 'boolean', 'newFile.tv4.valid is boolean' ) ;
 		assert.equal( newFile.tv4.error, null, 'newFile.tv4.error is null' ) ;
-		assert.notEqual( typeof newFile.tv4.missing, 'undefined', 'newFile.tv4.missing is present' ) ;
-		assert.notEqual( typeof newFile.tv4.missing.length, 'newFile.tv4.missing is an array' ) ;
-		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing should not be zero-length' ) ;
-		assert.ok( newFile.tv4.valid, 'newFile.tv4.valid is true' ) ;
+		assert.true( typeof newFile.tv4.missing != 'undefined', 'newFile.tv4.missing is present' ) ;
+		assert.true( typeof newFile.tv4.missing.length != 'undefined', 'newFile.tv4.missing is an array' ) ;
+		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing is empty' ) ;
+		assert.true( newFile.tv4.valid, 'newFile.tv4.valid is true' ) ;
 	} ) ;
 
 	stream.once( 'end', function() {
@@ -50,15 +50,15 @@ test( 'Pass a valid file when called with a schema filename', function( assert )
 
 	var stream = tv4( fakeSchema ) ;
 	stream.on( 'data', function( newFile ) {
-		assert.notEqual( newFile, 'undefined', 'newFile is present' ) ;
-		assert.notEqual( newFile.tv4, 'undefined', 'newFile.tv4 is present' ) ;
-		assert.notEqual( newFile.tv4.valid, 'undefined', 'newFile.tv4.valid is present' ) ;
-		assert.equal( typeof newFile.tv4.valid, 'boolean', 'newFile.tv4.valid is a Boolean value' ) ;
+		assert.true( typeof newFile != 'undefined', 'newFile is present' ) ;
+		assert.true( typeof newFile.tv4 != 'undefined', 'newFile.tv4 is present' ) ;
+		assert.true( typeof newFile.tv4.valid != 'undefined', 'newFile.tv4.valid is present' ) ;
+		assert.true( typeof newFile.tv4.valid == 'boolean', 'newFile.tv4.valid is boolean' ) ;
 		assert.equal( newFile.tv4.error, null, 'newFile.tv4.error is null' ) ;
-		assert.notEqual( newFile.tv4.missing, 'undefined', 'newFile.tv4.missing is present' ) ;
-		assert.notEqual( newFile.tv4.missing.length, 'undefined', 'newFile.tv4.missing is an array' ) ;
-		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing is zero-length' ) ;
-		assert.ok( newFile.tv4.valid, 'newFile.tv4.valid is true' ) ;
+		assert.true( typeof newFile.tv4.missing != 'undefined', 'newFile.tv4.missing is present' ) ;
+		assert.true( typeof newFile.tv4.missing.length != 'undefined', 'newFile.tv4.missing is an array' ) ;
+		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing is empty' ) ;
+		assert.true( newFile.tv4.valid, 'newFile.tv4.valid is true' ) ;
 	} ) ;
 
 	stream.once( 'end', function() {
@@ -84,17 +84,17 @@ test( 'Fail a file with an invalid data type', function( assert ) {
 
 	var stream = tv4( fakeSchema ) ;
 	stream.on( 'data', function( newFile ) {
-		assert.notEqual( newFile, 'undefined', 'newFile is present' ) ;
-		assert.notEqual( newFile.tv4, 'undefined', 'newFile.tv4 is present' ) ;
-		assert.notEqual( newFile.tv4.valid, 'undefined', 'newFile.tv4.valid is present' ) ;
-		assert.equal( typeof newFile.tv4.valid, 'boolean', 'newFile.tv4.valid is a Boolean value' ) ;
-		assert.notEqual( typeof newFile.tv4.error, 'null', 'newFile.tv4.error is not null' ) ;
-		assert.notEqual( newFile.tv4.error.message, 'undefined', 'newFile.tv4.error.message is present' ) ;
+		assert.true( typeof newFile != 'undefined', 'newFile is present' ) ;
+		assert.true( typeof newFile.tv4 != 'undefined', 'newFile.tv4 is present' ) ;
+		assert.true( typeof newFile.tv4.valid != 'undefined', 'newFile.tv4.valid is present' ) ;
+		assert.true( typeof newFile.tv4.valid == 'boolean', 'newFile.tv4.valid is boolean' ) ;
+		assert.notEqual( newFile.tv4.error, null, 'newFile.tv4.error is not null' ) ;
+		assert.true( newFile.tv4.error.message != 'undefined', 'newFile.tv4.error.message is present' ) ;
 		assert.equal( newFile.tv4.error.message, 'Invalid type: string (expected number)', 'newFile.tv4.error.message is correct' ) ;
-		assert.notEqual( newFile.tv4.missing, 'undefined', 'newFile.tv4.missing is present' ) ;
-		assert.notEqual( newFile.tv4.missing.length, 'undefined', 'newFile.tv4.missing is an array' ) ;
-		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing is zero-length' ) ;
-		assert.notOk( newFile.tv4.valid, 'newFile.tv4.valid is false' ) ;
+		assert.true( typeof newFile.tv4.missing != 'undefined', 'newFile.tv4.missing is present' ) ;
+		assert.true( typeof newFile.tv4.missing.length != 'undefined', 'newFile.tv4.missing is an array' ) ;
+		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing is empty' ) ;
+		assert.false( newFile.tv4.valid, 'newFile.tv4.valid is false' ) ;
 	} ) ;
 
 	stream.once( 'end', function() {
@@ -120,17 +120,17 @@ test( 'Fail a file with a missing field', function( assert ) {
 
 	var stream = tv4( fakeSchema ) ;
 	stream.on( 'data', function( newFile ) {
-		assert.notEqual( newFile, 'undefined', 'newFile is present' ) ;
-		assert.notEqual( newFile.tv4, 'undefined', 'newFile.tv4 is present' ) ;
-		assert.notEqual( newFile.tv4.valid, 'undefined', 'newFile.tv4.valid is present' ) ;
-		assert.equal( typeof newFile.tv4.valid, 'boolean', 'newFile.tv4.valid is a Boolean value' ) ;
-		assert.notEqual( typeof newFile.tv4.error, 'null', 'newFile.tv4.error is not null' ) ;
-		assert.notEqual( newFile.tv4.error.message, 'undefined', 'newFile.tv4.error.message is present' ) ;
+		assert.true( typeof newFile != 'undefined', 'newFile is present' ) ;
+		assert.true( typeof newFile.tv4 != 'undefined', 'newFile.tv4 is present' ) ;
+		assert.true( typeof newFile.tv4.valid != 'undefined', 'newFile.tv4.valid is present' ) ;
+		assert.true( typeof newFile.tv4.valid == 'boolean', 'newFile.tv4.valid is boolean' ) ;
+		assert.notEqual( newFile.tv4.error, null, 'newFile.tv4.error is not null' ) ;
+		assert.true( newFile.tv4.error.message != 'undefined', 'newFile.tv4.error.message is present' ) ;
 		assert.equal( newFile.tv4.error.message, 'Missing required property: db_port', 'newFile.tv4.error.message is correct' ) ;
-		assert.notEqual( newFile.tv4.missing, 'undefined', 'newFile.tv4.missing is present' ) ;
-		assert.notEqual( newFile.tv4.missing.length, 'undefined', 'newFile.tv4.missing is an array' ) ;
-		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing should be zero-length' ) ;
-		assert.notOk( newFile.tv4.valid, 'newFile.tv4.valid is false' ) ;
+		assert.true( typeof newFile.tv4.missing != 'undefined', 'newFile.tv4.missing is present' ) ;
+		assert.true( typeof newFile.tv4.missing.length != 'undefined', 'newFile.tv4.missing is an array' ) ;
+		assert.equal( newFile.tv4.missing.length, 0, 'newFile.tv4.missing is empty' ) ;
+		assert.false( newFile.tv4.valid, 'newFile.tv4.valid is false' ) ;
 	} ) ;
 
 	stream.once( 'end', function() {
