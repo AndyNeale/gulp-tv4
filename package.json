@@ -1,7 +1,7 @@
 {
   "name": "gulp-tv4",
   "description": "Validate files against json-schema v4",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/AndyNeale/gulp-tv4#readme",
   "author": {
     "name": "Andy Neale",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "chai": "^3.2.0",
-    "event-stream": "^3.3.1",
+    "event-stream": "<=3.3.4",
     "mocha": "^2.2.5",
     "should": "^7.0.2"
   }
